@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/app
+    tty: true
+    image: chatapp-sample
+    container_name: chatapp-sample-container
+    environment:
+      TZ: 'Asia/Tokyo'
+    network_mode: 'host'
